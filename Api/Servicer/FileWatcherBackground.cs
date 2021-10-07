@@ -13,24 +13,17 @@ namespace Api.Servicer
     public class FileWatcherBackground : BackgroundService
     {
         private readonly IHostEnvironment _env;
-        private FileSystemWatcher _fsw;
+        
         public FileWatcherBackground(IHostEnvironment env)
         {
             _env = env;
         }
-        public override Task StartAsync(CancellationToken cancellationToken)
-        {
-            return base.StartAsync(cancellationToken);
-        }
-        public override Task StopAsync(CancellationToken cancellationToken)
-        {
-            return base.StopAsync(cancellationToken);
-        }
+    
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
             string path = Path.Combine(_env.ContentRootPath, "wwwroot");
-            _fsw = new FileSystemWatcher(path, "*.xlsx");
+            FileSystemWatcher _fsw = new FileSystemWatcher(path, "*.xlsx");
             _fsw.Created += fsw_Created;
             _fsw.Changed += fsw_Changed;
             _fsw.Renamed += fsw_Renamed;
@@ -87,17 +80,16 @@ namespace Api.Servicer
 
                     for (int j = row.FirstCellNum;j<cellCount; j++)
                     {
-                        if (row.GetCell(j) != null)
+                        if (row.GetCell(j) != null && !string.IsNullOrEmpty(row.GetCell(j).ToString()))
                         {
-                            if (!string.IsNullOrEmpty(row.GetCell(j).ToString()))
-                            {
+                       
                                 rowList.Add(row.GetCell(j).ToString());
 
-                            }
+                           
                         }
                     }
                 }
-                int count = rowList.Count();
+                
 
 
 

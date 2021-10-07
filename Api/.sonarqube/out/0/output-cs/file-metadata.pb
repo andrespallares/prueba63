@@ -1,0 +1,11 @@
+P
+GC:\Users\andre\Documents\prueba60\Api\Controllers\DescargaController.csutf-8W
+NC:\Users\andre\Documents\prueba60\Api\Controllers\WeatherForecastController.csutf-8B
+9C:\Users\andre\Documents\prueba60\Api\Models\FileModel.csutf-8K
+BC:\Users\andre\Documents\prueba60\Api\Models\MarcasUpdateFilter.csutf-89
+0C:\Users\andre\Documents\prueba60\Api\Program.csutf-8P
+GC:\Users\andre\Documents\prueba60\Api\Servicer\FileWatcherBackground.csutf-89
+0C:\Users\andre\Documents\prueba60\Api\Startup.csutf-8A
+8C:\Users\andre\Documents\prueba60\Api\WeatherForecast.csutf-8w
+lC:\Users\andre\Documents\prueba60\Api\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.csutf-8\
+QC:\Users\andre\Documents\prueba60\Api\obj\Debug\netcoreapp3.1\Api.AssemblyInfo.csutf-8

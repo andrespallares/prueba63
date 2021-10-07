@@ -20,7 +20,7 @@ namespace Api.Controllers
             foreach(var formfile in files)
             {
                 //cambiar la carpeta temporal por una que establezcamos la ubicacion nosotros
-                var filepath = Path.GetTempFileName();
+                var filepath = Path.GetRandomFileName();
                 using (var stream=System.IO.File.Create(filepath))
                 {
                     await formfile.CopyToAsync(stream);
@@ -46,11 +46,7 @@ namespace Api.Controllers
         [HttpGet]
         public IActionResult Get([FromForm] FileModel file)
         {
-            //string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", file.FileName);
-            //using (Stream stream = new FileStream(path, FileMode.Create))
-            //{
-            //    await file.FormFile.CopyToAsync(stream);
-            //}
+           
 
             
             return Ok();

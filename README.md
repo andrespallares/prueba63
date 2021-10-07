@@ -136,7 +136,9 @@ ___
 
 https://www.youtube.com/watch?v=YkR0FE3sVfw
 
+# Configuracion sonar cube
 
+sonar-scanner.bat -D"sonar.projectKey=andrespallares_prueba33" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=6dfff1b7bf707c0850519935a1513522084badf0"
 
 
 

@@ -16,11 +16,11 @@ namespace Api.Controllers
     [ApiController]
     public class WeatherForecastController : Controller
     {
-        private readonly ILogger<WeatherForecastController> _logger;
+        
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
-            _logger = logger;
+           
         }
 
         [HttpGet]

@@ -1,4 +1,4 @@
-using Api.Hubs;
+
 using Api.Servicer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,7 +32,7 @@ namespace Api
                                                                                          .AllowAnyMethod()
                                                                                          .AllowAnyHeader()
                                                                                          .AllowCredentials()));
-            //services.AddHostedService<FileWatcherBackground>();
+            
             services.AddSignalR(o => {
                 o.EnableDetailedErrors = true;
             });
@@ -46,11 +46,11 @@ namespace Api
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseHttpsRedirection();
+            
 
             app.UseRouting();
 
-            //app.UseAuthorization();
+            
 
             app.UseCors("AllowOrigin");
           
@@ -58,7 +58,7 @@ namespace Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapHub<FilterHub>("/filterHub");
+                
 
             });
         }
